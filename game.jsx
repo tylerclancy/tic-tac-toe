@@ -4,7 +4,7 @@ const Board = () => {
 
   return (
     <div className="game-board" onClick={e => {
-      setPlayer(player + 1);
+      setPlayer((player + 1) % 2);
       status = `Player ${player}`
     }}>
       <div id="info">
