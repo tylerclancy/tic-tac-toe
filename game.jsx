@@ -1,9 +1,12 @@
 const Board = () => {
-  let player = 1;
+  const [player, setPlayer] = React.useState(1);
   let status = `Player ${player}`
-  
+
   return (
-    <div className="game-board">
+    <div className="game-board" onClick={e => {
+      setPlayer(player + 1);
+      status = `Player ${player}`
+    }}>
       <div id="info">
         <h1>{status}</h1>
       </div>
